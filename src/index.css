@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap");
+
+:root {
+  color-scheme: light;
+  --cf-bg: #ffffff;
+  --cf-soft: #fafaf9;
+  --cf-ink: #121117;
+  --cf-inkSoft: #6b6875;
+  --cf-line: #edeaf1;
+  --cf-successBg: #eaf8ef;
+  --cf-selectBg: #f0f6ff;
+  --cf-iconBg: #eaf1ff;
+  --cf-dangerBg: #fdecea;
+  --cf-toggleOff: #e4e2e8;
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --cf-bg: #121117;
+  --cf-soft: #1c1b22;
+  --cf-ink: #f5f4f7;
+  --cf-inkSoft: #9c99a6;
+  --cf-line: #2a2830;
+  --cf-successBg: #12291c;
+  --cf-selectBg: #16233a;
+  --cf-iconBg: #16233a;
+  --cf-dangerBg: #331915;
+  --cf-toggleOff: #3a3842;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: var(--cf-bg);
+  font-family: "Vazirmatn", sans-serif;
+  overscroll-behavior: none;
+  transition: background-color 0.2s ease;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+.cf-scroll::-webkit-scrollbar {
+  display: none;
+}
+.cf-scroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.cf-card-press:active {
+  transform: scale(0.97);
+}
+.cf-btn-press:active {
+  transform: scale(0.95);
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
+}
+
+@keyframes cf-pop {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes cf-toast {
+  0% {
+    transform: translate(-50%, 20px);
+    opacity: 0;
+  }
+  15% {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+  85% {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, 20px);
+    opacity: 0;
+  }
+}
